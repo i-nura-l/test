@@ -1,0 +1,37 @@
+1. Handling Missing Data Questions:
+How do you identify and handle missing values in a Pandas DataFrame?
+To identify use use .isna() or .isnull()
+To handle use .dropna() or .fillna() mean/median
+What is imputation, and why might it be useful in dealing with missing data?
+It is substituting missing values (mean, median, mode) for the missing data to prevent data loss.
+
+2. Data Transformation Questions:
+How can you encode categorical variables in a Pandas DataFrame?
+pd.get_dummies() for one-hot encoding.
+LabelEncoder from sklearn.preprocessing for ordinal categories.
+astype('category').cat.codes for quick numerical encoding.
+What is one-hot encoding, and when would you use it in data preprocessing?
+One-hot encoding creates binary columns for each category. It is useful when dealing with non-ordinal categorical variables in machine learning models, especially for algorithms like linear regression or neural networks.
+
+3. Removing Duplicates Questions:
+How do you identify and remove duplicate rows from a DataFrame?
+Use df.duplicated() to check for duplicates.
+Use df.drop_duplicates() to remove them.
+Can you explain the difference between the duplicated() and drop_duplicates() methods in Pandas?
+duplicated() returns a Boolean Series indicating duplicated rows.
+drop_duplicates() removes duplicate rows and returns a new DataFrame.
+4. Data Scaling and Normalization Questions:
+Discuss the importance of feature scaling in machine learning.
+Feature Scaling helps to minimize the impact of outliers, thereby ensuring that no single feature dominates the others and has undue influence on the predictive model.
+Explain the difference between min-max scaling and z-score normalization.
+Min-max scaling scales data to fit within a specific range, usually between 0 and 1, while z-score normalization scales data to have a mean of 0 and a standard deviation of 1. The key difference is that min-max scaling is sensitive to outliers while z-score normalization is not
+
+5. Handling Outliers Questions:
+What are outliers, and why might they impact machine learning models?
+Outliers are extreme values that deviate significantly from the rest of the data, which can cause poor performance.
+Describe different methods for detecting outliers in a dataset in Python
+Use scatter plot, histogram, box-plot and z-score normalization
+How can you handle outliers in a continuous numerical variable in Python?
+Remove them using df[df['column'].between(lower_bound, upper_bound)].
+Replace with median or mean.
+

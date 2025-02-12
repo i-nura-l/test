@@ -35,7 +35,7 @@ def ex4():
     labels = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
     df =  pd.DataFrame(exam_data, index=labels)
     print(df)
-#ex4()
+ex4()
 
 # 5- Write a Pandas program to select the rows where the number of attempts in the examination is greater than 2.
 def ex5():
